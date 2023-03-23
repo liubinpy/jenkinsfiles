@@ -1,14 +1,16 @@
 @Library('jenkinslibs')
 
-def tools = new org.devops.tools
+def tools = new org.devops.tools()
 
 
 pipeline {
     agent any
     stages {
-        stage('Hello') {
+        stage('test') {
             steps {
-                echo 'Hello World'
+                script{
+                  tools.PrintMsg("this is my lib!")
+                }
             }
         }
     }
