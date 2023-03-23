@@ -10,7 +10,7 @@ pipeline {
         stage('test') {
             steps {
                 script{
-                  tools.PrintMsg("this is my lib!")
+                  tools.PrintMsgWithColor("this is my lib!","green")
                 }
             }
         }
