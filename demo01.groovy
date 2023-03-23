@@ -1,4 +1,4 @@
-@Library('jenkinslibs@master') _
+@Library('jenkinslibs@main') _
 
 def tools = new org.devops.tools()
 
