@@ -1,16 +1,17 @@
 @Library('jenkinslibs@main') _
 
-def tools = new org.devops.tools()
+def build = new org.devops.build()
 
-hello()
 
+String buildType = "${env.buildType}"
+String buildShell = "${env.buildShell}"
 pipeline {
     agent any
     stages {
-        stage('test') {
+        stage('build') {
             steps {
                 script{
-                  tools.PrintMsgWithColor("this is my lib!","green")
+                   build.Build(buildType, buildShell)
                 }
             }
         }
